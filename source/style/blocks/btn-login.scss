@@ -1,0 +1,16 @@
+.btn-login {
+    @include roboto-font-family(medium);
+
+    padding: 7px 30px;
+
+    text-align: center;
+    text-decoration: none;
+
+    color: $mainLightTextColor;
+    border: 1px solid $mainLightTextColor;
+    border-radius: 5px;
+    background-color: transparent;
+
+    font-size: 16px;
+    line-height: 36px;
+}

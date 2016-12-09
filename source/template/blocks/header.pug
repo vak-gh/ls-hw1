@@ -1,0 +1,25 @@
+header(class="header header--" + page)
+    if (page != "index")
+        .container
+            .header-top
+                +socials-list()
+                a(href="#").header-top__btn-menu
+                    svg.header-top__svg-menu
+                        use(href="/assets/img/sprite.svg#hamburger")
+            if (page != "blog")
+                +owner-info()
+                svg.header__svg-portfolio
+                    use(href="/assets/img/sprite.svg#portfolio_header")
+                a(href="#").header__arrow
+                    +svg("header__svg-arrow", "arrow_down")
+            else
+                .header__main
+                    +avatar("/assets/img/photo.jpg")
+                    .heading.heading--dashed.header__heading
+                        h1.heading__content Блог
+                    .header__description Статьи, которые я написал
+        +triangle("header__triangle header__triangle--left")
+        +triangle("header__triangle header__triangle--right")
+    else
+        .container
+            a(href="#").btn-login= "Авторизоваться"

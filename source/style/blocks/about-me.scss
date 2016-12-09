@@ -1,0 +1,113 @@
+.about-me {
+    position: relative;
+
+    &::before, &::after {
+        position: absolute;
+        z-index: -1;
+        top: 0;
+
+        display: block;
+
+        width: 50%;
+        height: 100%;
+
+        content: "";
+    }
+
+    &::before {
+        left: 0;
+
+        background: #efeee9;
+    }
+
+    &::after {
+        left: 50%;
+
+        background: #eeebdf;
+    }
+
+    &__left {
+        float: left;
+
+        width: 50%;
+    }
+
+    &__img {
+        display: block;
+
+        margin: 0 auto;
+        margin-bottom: 30px;
+    }
+
+    &__main-heading {
+        margin-bottom: 53px;
+    }
+
+    &__skills-heading {
+        margin-bottom: 24px;
+        padding-top: 18px;
+    }
+
+    &__description, &__skills-description {
+        @include roboto-font-family();
+
+        width: 443px;
+        margin: 0 auto;
+        margin-bottom: 17px;
+
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    &__description-heading {
+        margin-bottom: 32px;
+    }
+
+    &__right {
+        float: right;
+
+        width: 50%;
+    }
+
+    &__skills-description {
+        width: 540px;
+        margin: 0 auto;
+        margin-bottom: 47px;
+    }
+
+    &__skill-group {
+        margin-left: 16px;
+
+        &:last-of-type {
+            margin-bottom: 97px;
+        }
+    }
+
+    &__skill-group-name {
+        @include roboto-font-family(medium);
+
+        margin-bottom: 10px;
+        margin-left: 20px;
+
+        font-size: 28px;
+        line-height: 32px;
+    }
+
+    &__skill-chart {
+        width: 580px;
+        height: 119px;
+        margin-bottom: 30px;
+
+        &--frontend {
+            background: url("/assets/img/chart1.jpg");
+        }
+
+        &--backend {
+            background: url("/assets/img/chart2.jpg");
+        }
+
+        &--workflow {
+            background: url("/assets/img/chart3.jpg");
+        }
+    }
+}

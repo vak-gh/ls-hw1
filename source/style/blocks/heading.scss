@@ -1,0 +1,64 @@
+.heading {
+    text-align: center;
+
+    &__content {
+        position: relative;
+
+        display: inline-block;
+
+        margin: 0;
+
+        vertical-align: top;
+        text-transform: capitalize;
+
+        color: $headingColor;
+
+        font-family: $bernierFontFamily;
+        font-size: 63px;
+
+        span {
+            display: block;
+        }
+    }
+
+    &--align-left {
+        text-align: left;
+    }
+
+    &--dashed {
+        .heading__content:before, .heading__content:after {
+            @include sprite($header-rectangle);
+
+            position: absolute;
+            top: 31px;
+
+            content: "";
+        }
+
+        .heading__content:before {
+            left: -49px;
+        }
+
+        .heading__content:after {
+            right: -49px;
+        }
+    }
+
+    &--medium-size {
+        .heading__content {
+            font-size: 35px;
+        }
+
+        .heading__content:before, .heading__content:after {
+            top: 18px;
+        }
+
+        .heading__content:before {
+            left: -49px;
+        }
+
+        .heading__content:after {
+            right: -49px;
+        }
+    }
+}

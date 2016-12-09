@@ -1,0 +1,55 @@
+extends ../_layout
+block variables
+    -var title = "Виктор Казаков | Личный сайт веб-разработчика"
+    -var page = "about"
+
+
+block head
+    script(src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyDbEdfIvTTEDKV4Km3u9_WnN4ngdmpMCmQ&callback=initMap" defer)
+
+block header
+    include ../blocks/header
+
+block content
+    .about-me
+        .container
+            .about-me__left
+                .about-me__main-heading.heading.heading--dashed
+                    h1.heading__content= "Обо мне"
+                img.about-me__img(src = "/assets/img/photo_full.jpg" alt="Фото")
+                .about-me__description-heading.heading.heading--medium-size.heading--dashed
+                    h2.heading__content= "Кто я"
+                p.about-me__description Я веб разработчик из Москвы. Мне 26 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+                p.about-me__description Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите,как тут всё классно и красиво!
+            .about-me__right
+                .about-me__skills-heading.heading.heading--medium-size.heading--dashed
+                    h2.heading__content= "Чем я могу быть"
+                        span вам полезен
+                .about-me__skills-description Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
+                .about-me__skill-group
+                    h3.about-me__skill-group-name Frontend
+                    .about-me__skill-chart.about-me__skill-chart--frontend
+                .about-me__skill-group
+                    h3.about-me__skill-group-name Backend
+                    .about-me__skill-chart.about-me__skill-chart--backend
+                .about-me__skill-group
+                    h3.about-me__skill-group-name Workflow
+                    .about-me__skill-chart.about-me__skill-chart--workflow
+    .container
+        .contacts
+            .contacts__heading.heading.heading--dashed.heading--medium-size
+                h2.heading__content Контакты
+            +contact__item("skype-svg", "skype", "vak.skilldev")
+            +contact__item("email-svg", "envelope", "vak.skilldev@gmail.com")
+            +contact__item("phone-svg", "phone", "+7 000 0000000")
+            +contact__item("pin-svg", "map_marker", "г. Москва")
+    .map#map
+    include ../blocks/footer
+
+
+
+
+
+
+
+

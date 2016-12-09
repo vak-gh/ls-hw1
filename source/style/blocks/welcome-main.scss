@@ -1,0 +1,36 @@
+.welcome-main {
+    padding-top: 39px;
+    padding-bottom: 41px;
+
+    background-color: rgba(#ffffff, 0.85);
+
+
+    .owner-info {
+        margin-bottom: 34px;
+    }
+
+    &__buttons-list {
+        position: absolute;
+        bottom: -48px;
+
+        width: 100%;
+        margin: 0;
+        padding: 0;
+
+        list-style-type: none;
+
+        outline: none;
+
+        font-size: 0;
+    }
+
+    &__list-item {
+        display: inline-block;
+
+        vertical-align: top;
+    }
+
+    .form-button {
+        padding: 15px 30px;
+    }
+}

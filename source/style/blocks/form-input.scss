@@ -1,0 +1,22 @@
+.form-input {
+    width: 100%;
+    padding: 12px 20px;
+
+    border-color: transparent;
+    border-radius: 4px;
+
+    font-size: 16px;
+
+    &:-moz-placeholder {
+        @include placeholder-style();
+    }
+    &:-ms-input-placeholder {
+        @include placeholder-style();
+    }
+    &::-moz-placeholder {
+        @include placeholder-style();
+    }
+    &::-webkit-input-placeholder {
+        @include placeholder-style();
+    }
+}

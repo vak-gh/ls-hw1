@@ -1,0 +1,23 @@
+extends ../_layout
+block variables
+    -var title = "Виктор Казаков | Личный сайт веб-разработчика"
+    -var page = "index"
+
+block header
+    include ../blocks/header
+block content
+    .welcome-main
+        +owner-info("owner-info--small-black")
+        +socials-list("socials-list--teal")
+        ul.welcome-main__buttons-list
+            li.welcome-main__list-item
+                a.form-button.form-button--border-right(href= "works.html")= 'Мои работы'
+            li.welcome-main__list-item
+                a.form-button.form-button--border-right(href= "about.html")= 'Обо мне'
+            li.welcome-main__list-item
+                a.form-button(href= "blog.html")= 'Блог'
+    .footer-text © Виктор Казаков | создано с любовью в LoftSchool | 2016
+
+
+
+

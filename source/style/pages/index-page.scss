@@ -1,0 +1,34 @@
+.page-wrapper--index {
+    position: relative;
+
+    overflow: auto;
+
+    height: 100vh;
+    min-height: 700px;
+
+    background: url("/assets/img/mountains-bg.jpg");
+    background-size: cover;
+
+    .welcome-main {
+        position: relative;
+
+        width: 380px;
+        margin: 0 auto;
+        margin-top: 47px;
+    }
+
+    .btn-login {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    .footer-text {
+        position: absolute;
+        bottom: 24px;
+
+        width: 100%;
+
+        text-align: center;
+    }
+}

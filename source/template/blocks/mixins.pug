@@ -1,0 +1,57 @@
+mixin socials-list (addClass, socials)
+    -socials = socials || ['vk', 'github', 'in']
+    -classList = addClass ? "socials-list " + addClass  : "socials-list"
+    ul(class = classList)
+        each social in socials
+            li.socials-list__item
+                a(class = `socials-list__link socials-list__link--${social}` href = "#")
+                    svg(class = `socials-list__link-svg socials-list__link-svg--${social}`)
+                        use(href = 'assets/img/sprite.svg#' + social)
+
+mixin navigation (addClass, menuList)
+    -menuList = menuList || [{name: "Мои работы", link: "works.html"},  {name: 'Обо мне', link: "about.html"}, {name: "Блог", link: "blog.html"}, {name: "Авторизация", link: "login.html"}]
+    -classList = addClass ? "main-nav " + addClass : "main-nav";
+    nav(class=classList)
+        ul(class = "main-nav__list")
+            each item in menuList
+                li.main-nav__item
+                    a.main-nav__link(href= item.link)= item.name
+
+mixin owner-info (addClass)
+    -classList = addClass ? "owner-info " + addClass : "owner-info"
+    div(class=classList)
+        +avatar("/assets/img/photo.jpg")
+        .owner-info__name Виктор Казаков
+        .owner-info__site-description Личный сайт веб разработчика
+
+mixin avatar (imgSrc)
+    .avatar
+        img.avatar__img(src = imgSrc alt = "Аватар")
+
+mixin quote (quoteText, avatar, author, position)
+    blockquote.quote
+        p.quote__text= quoteText
+        +avatar(avatar)
+        cite.quote__cite
+            span.quote__author= author
+            span.quote__author-position= position
+
+mixin linkList (className, listItems)
+    nav(class = className)
+        ul(class = `${className} + __list`)
+            each item in listItems
+                li(class = `${className}__item`)
+                    a(class = `${className}__link` href= "#")= item
+
+mixin triangle (className)
+    svg(class=className viewBox = "0 0 600 100" preserveAspectRatio="none")
+        polygon(points = "0,0 0,100 600,100")
+
+mixin svg(className, svgName)
+    svg(class = className)
+        use(href="/assets/img/sprite.svg#" + svgName)
+
+mixin contact__item(svgClass, svgSpriteName, itemText)
+    .contacts__item
+        +svg("contacts__" + svgClass, svgSpriteName)
+        .contacts__item-text= itemText

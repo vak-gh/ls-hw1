@@ -1,0 +1,21 @@
+.page-wrapper--works {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+    .header-top {
+        margin-bottom: 84px;
+    }
+
+    .works {
+        position: relative;
+
+        min-height: 700px;
+    }
+
+    .reviews {
+        position: relative;
+
+        min-height: 1139px;
+    }
+}

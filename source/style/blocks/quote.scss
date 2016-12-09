@@ -1,0 +1,64 @@
+blockquote, cite, p {
+    margin: 0;
+    padding: 0;
+}
+
+.quote {
+    //TODO avatar sprite
+    .avatar {
+        display: inline-block;
+
+        width: 77px;
+        height: 77px;
+        margin-right: 20px;
+
+        vertical-align: middle;
+    }
+
+    &__cite {
+        display: inline-block;
+
+        vertical-align: middle;
+        text-decoration: none;
+
+        font-style: normal;
+    }
+
+    &__author {
+        @include roboto-font-family(bold);
+
+        display: block;
+
+        color: #20b5a1;
+
+        font-weight: bold;
+    }
+
+    &__author-position {
+    }
+
+    &__text {
+        @include roboto-font-family();
+
+        position: relative;
+
+        margin-bottom: 20px;
+        padding-top: 53px;
+
+        font-size: 16px;
+        line-height: 26px;
+
+        &:before {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            width: 32px;
+            height: 29px;
+
+            content: "";
+
+            background: url("/assets/img/quote.png");
+        }
+    }
+}

@@ -1,0 +1,90 @@
+.socials-list {
+    margin: 0;
+    padding: 0;
+
+    list-style-type: none;
+
+    text-align: center;
+
+    &__item {
+        display: inline-block;
+
+        margin-right: 24px;
+
+        vertical-align: top;
+
+        font-size: 0;
+
+        &:last-of-type {
+            margin-right: 0;
+        }
+    }
+
+
+    &__link {
+        //TODO Link size?
+        text-decoration: none;
+    }
+
+    &__link-svg {
+        height: 22px;
+
+        fill: rgba(#ffffff, 0.5);
+        &:hover {
+            fill: #ffffff;
+        }
+    }
+
+    &__link-svg--vk {
+        width: 31px;
+    }
+
+    &__link-svg--github {
+        width: 26px;
+    }
+
+    &__link-svg--in {
+        width: 24px;
+    }
+
+    &--teal {
+        .socials-list__link-svg {
+            fill: rgba(#00bfa5, 0.5);
+            &:hover {
+                fill: #00bfa5;
+            }
+        }
+    }
+
+
+
+    &--round {
+        .socials-list__link-svg {
+            width: 25px;
+            height: 18px;
+        }
+
+        .socials-list__item {
+            width: 37px;
+            height: 37px;
+            padding-top: 10px;
+
+            border: 1px solid rgba(#ffffff, 0.5);
+            border-radius: 50%;
+
+
+            &:hover {
+                cursor: pointer;
+
+                border: 1px solid #ffffff;
+                background: #ffffff;
+                .socials-list__link-svg {
+                    fill: #2f4348;
+                    &:hover {
+                        fill: #2f4348;
+                    }
+                }
+            }
+        }
+    }
+}

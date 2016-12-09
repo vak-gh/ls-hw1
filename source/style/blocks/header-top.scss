@@ -1,0 +1,27 @@
+.header-top {
+    @extend %clearfix;
+
+    overflow: auto;
+
+    .socials-list {
+        float: left;
+
+        width: 180px;
+        margin-top: 30px;
+        margin-left: 10px;
+    }
+
+    .header-top__btn-menu {
+        float: right;
+
+        margin-top: 28px;
+        margin-right: 30px;
+    }
+
+    .header-top__svg-menu {
+        width: 40px;
+        height: 35px;
+
+        fill: #ffffff;
+    }
+}

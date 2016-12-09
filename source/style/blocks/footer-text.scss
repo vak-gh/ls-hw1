@@ -1,0 +1,10 @@
+.footer-text {
+    //TODO color differs from psd
+    @include roboto-font-family(light);
+
+    color: rgba($mainLightTextColor, 0.4);
+
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+}

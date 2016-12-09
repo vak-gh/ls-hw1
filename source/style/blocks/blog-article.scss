@@ -1,0 +1,31 @@
+.blog-article {
+    padding-bottom: 70px;
+    &__date {
+        @include roboto-font-family();
+
+        margin: 20px 0;
+
+        color: #00bfa5;
+
+        font-size: 16px;
+    }
+
+    &__heading {
+        margin: 12px 0;
+    }
+
+    &__text {
+        @include roboto-font-family();
+
+        color: #455a64;
+
+        font-size: 16px;
+        line-height: 26px;
+    }
+    &:not(:last-of-type) {
+        margin-bottom: 70px;
+
+        border-bottom: 5px solid rgba(#455a64, 0.07);
+    }
+}
+

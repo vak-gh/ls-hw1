@@ -1,0 +1,64 @@
+extends ../_layout
+block variables
+    -var title = "Виктор Казаков | Личный сайт веб-разработчика"
+    -var page = "works"
+
+block header
+    include ../blocks/header
+
+block content
+    .works
+        .container
+            .works__heading.heading.heading--dashed
+                h1.heading__content Мои работы
+            +svg("works__svg-header", "works_header")
+        .portfolio-gallery
+            .container
+                .portfolio-slide
+                    .portfolio-slide__img
+                    .portfolio-slide__description
+                        .portfolio-slide__heading.heading.heading--medium-size.heading--align-left
+                            h3.heading__content Сайт школы онлайн образования
+                        .portfolio-slide__technologies HTML, CSS, JavaScript
+                        a.portfolio-slide__btn(href = "#") Посмотреть сайт
+                            svg.portfolio-slide__svg-link
+                                use(href = "/assets/img/sprite.svg#link")
+    .reviews
+        .container
+            .reviews__heading.heading.heading--dashed
+                h1.heading__content Что обо мне
+                    span говорят
+                svg.reviews__svg-about
+                    use(href="/assets/img/sprite.svg#about_header")
+            .reviews__quotes-wrapper
+                +quote("Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!",
+                "/assets/img/quote_avatar.png",
+                "Ковальчук Дмитрий",
+                "основатель Loftschool")
+                +quote("Этот код выдержет любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!",
+                "/assets/img/quote_avatar1.png",
+                "Зар Захаров",
+                "преподаватель")
+            .contact-me
+                form.contact-me__form
+                    h2.heading.heading--medium-size.heading--dashed Cвязаться со мной
+                    input.form-input.contact-me__name(type = "text",
+                    id = "name",
+                    name = "name",
+                    placeholder = "Имя",
+                    required)
+                    input.form-input.contact-me__email(type = "email",
+                    id = "email",
+                    name = "email",
+                    placeholder = "Email",
+                    required)
+                    textarea.form-textarea.contact-me__message(id = "message"
+                    name = "message",
+                    placeholder = "Ваше сообщение"
+                    required)
+                .contact-me__buttons-wrapper
+                    button.form-button.form-button--border-right.contact-me__submit(type = "submit")= "Отправить"
+                    button.form-button.contact-me__reset= "Сбросить"
+            a(href="#").reviews__arrow
+                +svg("reviews__svg-arrow", "arrow_down")
+    include ../blocks/footer

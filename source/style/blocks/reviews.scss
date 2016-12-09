@@ -1,0 +1,81 @@
+.reviews {
+    background: url("/assets/img/water-bg.jpg") 50% -100px no-repeat;
+    background-size: cover;
+
+
+
+    &__heading {
+        margin-bottom: 49px;
+        padding-top: 54px;
+    }
+
+    &__svg-about {
+        position: absolute;
+        z-index: 1;
+        top: 20px;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        width: 499px;
+        height: 175px;
+        margin: 0 auto;
+
+        fill: rgba(#373e42, 0.1);
+    }
+
+    .contact-me {
+        width: 380px;
+        margin: 0 auto;
+    }
+
+
+    &__arrow {
+        position: absolute;
+        right: 0;
+        bottom: -124px;
+        left: 0;
+
+        display: block;
+
+        width: 26px;
+        height: 16px;
+        margin: 0 auto;
+    }
+
+    &__svg-arrow {
+        width: 100%;
+        height: 100%;
+
+        transform: rotate(180deg);
+
+        fill: rgba(#ffffff, 0.7);
+
+        &:hover {
+            fill: #ffffff;
+        }
+    }
+
+    &__quotes-wrapper {
+        @extend %clearfix;
+
+        margin-bottom: 120px;
+        padding-left: 210px;
+    }
+
+    .quote {
+        float: left;
+
+        max-width: 380px;
+        margin-right: 24px;
+    }
+}
+
+
+
+
+
+
+
+
+

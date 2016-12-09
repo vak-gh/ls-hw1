@@ -1,0 +1,80 @@
+.contact-me {
+    position: relative;
+
+    padding: 0 20px;
+    padding-top: 20px;
+
+    font-size: 0;
+    &:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+
+        content: "";
+
+        opacity: 0.4;
+        background: white;
+
+        -webkit-filter: blur(1px);
+           -moz-filter: blur(1px);
+             -o-filter: blur(1px);
+            -ms-filter: blur(1px);
+                filter: blur(1px);
+    }
+
+    &__form {
+        position: relative;
+        z-index: 100;
+
+        text-align: center;
+    }
+
+    .heading {
+        margin: 0 auto;
+        margin-bottom: 35px;
+    }
+
+    &__name, &__email {
+        margin-bottom: 20px;
+    }
+
+    &__message {
+        margin-bottom: 18px;
+    }
+
+    &__message {
+        height: 140px;
+    }
+
+    .form-button {
+        display: inline-block;
+
+        width: 50%;
+        padding: 14px 0;
+
+        vertical-align: top;
+    }
+
+    &__buttons-wrapper {
+        position: absolute;
+        bottom: -46px;
+        left: 0;
+
+        width: 100%;
+    }
+
+
+
+    &__submit.form-button {
+        border-bottom-left-radius: 4px;
+    }
+
+    &__reset.form-button {
+        //TODO cascade
+        border-bottom-right-radius: 4px;
+        background: rgba($mainThemeColor, 0.6);
+    }
+}

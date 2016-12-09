@@ -1,0 +1,19 @@
+.test {
+    overflow: hidden;
+
+    width: 25%;
+    height: 0;
+    padding-bottom: 25%;
+}
+
+.test:after {
+    display: block;
+
+    width: 0;
+    height: 0;
+
+    content: "";
+
+    border-right: 100px solid transparent;
+    border-bottom: 600px solid #4679bd;
+}

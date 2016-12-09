@@ -1,0 +1,45 @@
+.owner-info {
+    text-align: center;
+
+    .avatar {
+        width: 141px;
+        height: 141px;
+        margin: 0 auto;
+        margin-bottom: 21px;
+    }
+
+    &--small-black {
+        .avatar {
+            margin-bottom: 16px;
+        }
+
+        .owner-info__name {
+            color: $mainDarkTextColor;
+
+            font-size: 28px;
+        }
+
+        .owner-info__site-description {
+            color: $mainDarkTextColor;
+        }
+    }
+}
+
+.owner-info__name {
+    @include roboto-font-family(medium);
+
+    margin-bottom: 3px;
+
+    color: $mainLightTextColor;
+
+    font-size: 35px;
+}
+
+.owner-info__site-description {
+    @include roboto-font-family();
+
+    color: $mainLightTextColor;
+
+    font-size: 16px;
+    line-height: 24px;
+}

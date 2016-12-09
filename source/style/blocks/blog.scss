@@ -1,0 +1,51 @@
+.blog {
+    @extend %clearfix;
+    
+    &__contents {
+        float: left;
+
+        width: 30%;
+        height: 400px;
+    }
+
+    &__articles {
+        float: left;
+
+        width: 70%;
+        padding: 50px;
+    }
+
+    &__contents-list {
+        margin-top: 70px;
+        margin-right: 49px;
+
+        list-style: none;
+
+        text-align: right;
+    }
+
+    &__contents-item {
+        margin-bottom: 16px;
+        padding: 7px;
+        padding-right: 19px;
+
+        &--active {
+            border-right: 3px solid #00bfa5;
+
+            .blog__contents-link {
+                @include roboto-font-family("bold");
+
+                color: #00bfa5;
+            }
+        }
+    }
+
+    &__contents-link {
+        @include roboto-font-family();
+
+        cursor: pointer;
+
+        font-size: 16px;
+        line-height: 26px;
+    }
+}

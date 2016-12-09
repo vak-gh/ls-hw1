@@ -1,0 +1,28 @@
+.works {
+    background: #faf8f0;
+
+    &__heading {
+        padding: 57px 0;
+    }
+
+    .heading--dashed {
+        position: relative;
+        z-index: 100;
+
+        margin: 0 auto;
+    }
+
+    &__svg-header {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        left: 0;
+
+        width: 506px;
+        height: 165px;
+        margin: 0 auto;
+
+        fill: rgba(#f0eee7, 0.7);
+    }
+}
